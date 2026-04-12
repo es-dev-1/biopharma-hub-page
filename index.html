@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BioPharma Excipients — PharmaExcipients.com</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 <style>
   :root {
     --pe-grey: #575756;
@@ -39,9 +39,7 @@
     --slate-100: #efefee;
     --slate-50:  #f7f7f6;
     --white: #FFFFFF;
-    --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
     --max-width: 1280px;
     --header-height: 56px;
   }
@@ -64,7 +62,7 @@
     z-index: 100;
     border-bottom: 1px solid var(--pe-blue-dark);
   }
-  .site-header .logo { font-family: var(--font-body); font-weight: 700; font-size: 15px; color: var(--white); letter-spacing: -0.02em; }
+  .site-header .logo { font-weight: 700; font-size: 15px; color: var(--white); letter-spacing: -0.02em; }
   .site-header .logo span { color: #8bb8e0; }
   .site-header nav { margin-left: auto; display: flex; gap: 0; }
   .site-header nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; font-weight: 500; padding: 16px 18px; transition: color 0.2s, background 0.2s; position: relative; }
@@ -86,23 +84,22 @@
   @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
   @keyframes fadeInDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-  .hero h1 { font-family: var(--font-display); font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; max-width: 700px; margin-bottom: 16px; animation: fadeInUp 0.7s ease-out 0.1s both; }
+  .hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; max-width: 700px; margin-bottom: 16px; animation: fadeInUp 0.7s ease-out 0.1s both; }
   .hero h1 .accent { background: linear-gradient(135deg, var(--teal-400), #8bb8e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .hero p { font-size: 17px; color: var(--slate-400); max-width: 560px; line-height: 1.7; margin-bottom: 32px; animation: fadeInUp 0.7s ease-out 0.2s both; }
   .hero-search { display: flex; gap: 0; max-width: 540px; animation: fadeInUp 0.7s ease-out 0.3s both; }
-  .hero-search input { flex: 1; padding: 14px 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-right: none; border-radius: 8px 0 0 8px; color: var(--white); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s, background 0.2s; }
+  .hero-search input { flex: 1; padding: 14px 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-right: none; border-radius: 8px 0 0 8px; color: var(--white); font-size: 14px; outline: none; transition: border-color 0.2s, background 0.2s; }
   .hero-search input::placeholder { color: rgba(255,255,255,0.45); }
   .hero-search input:focus { background: rgba(255,255,255,0.14); border-color: var(--teal-400); }
-  .hero-search button { padding: 14px 28px; background: var(--teal-600); border: 1px solid var(--teal-500); border-radius: 0 8px 8px 0; color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 14px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+  .hero-search button { padding: 14px 28px; background: var(--teal-600); border: 1px solid var(--teal-500); border-radius: 0 8px 8px 0; color: var(--white); font-weight: 600; font-size: 14px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
   .hero-search button:hover { background: var(--teal-700); }
   .hero-stats { display: flex; gap: 40px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); animation: fadeInUp 0.7s ease-out 0.4s both; }
-  .hero-stat .num { font-family: var(--font-mono); font-size: 24px; font-weight: 500; color: var(--teal-400); }
+  .hero-stat .num { font-size: 24px; font-weight: 700; color: var(--teal-400); }
   .hero-stat .label { font-size: 12px; color: var(--slate-500); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em; }
   .main-layout { max-width: var(--max-width); margin: 0 auto; padding: 40px 24px; display: grid; grid-template-columns: 1fr 340px; gap: 48px; }
   @media (max-width: 960px) { .main-layout { grid-template-columns: 1fr; gap: 40px; } }
   .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--slate-100); }
-  .section-header h2 { font-family: var(--font-body); font-size: 20px; font-weight: 700; color: var(--pe-grey-dark); display: flex; align-items: center; gap: 10px; }
-  .section-header h2 .icon { width: 28px; height: 28px; background: var(--teal-50); border: 1px solid var(--teal-200); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .section-header h2 { font-size: 20px; font-weight: 700; color: var(--pe-grey-dark); }
   .section-header .view-all { font-size: 13px; font-weight: 600; color: var(--pe-blue); text-decoration: none; transition: color 0.2s; }
   .section-header .view-all:hover { color: var(--pe-blue-dark); }
   .function-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 48px; }
@@ -110,25 +107,27 @@
   .function-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--teal-500); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
   .function-card:hover { border-color: var(--teal-300); box-shadow: 0 4px 16px rgba(16,185,129,0.08); transform: translateY(-2px); }
   .function-card:hover::before { transform: scaleX(1); }
-  .function-card .card-icon { width: 40px; height: 40px; border-radius: 8px; background: var(--teal-50); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 12px; }
+  .function-card .card-icon { width: 40px; height: 40px; border-radius: 8px; background: var(--teal-50); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .function-card .card-icon img { width: 24px; height: 24px; object-fit: contain; }
   .function-card .card-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; line-height: 1.3; }
   .function-card .card-count { font-size: 12px; color: var(--slate-500); }
   .modality-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 48px; }
   .modality-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 100px; text-decoration: none; color: var(--pe-grey); font-size: 13.5px; font-weight: 500; transition: all 0.2s; }
   .modality-pill:hover { background: var(--teal-50); border-color: var(--teal-300); color: var(--teal-800); }
-  .modality-pill .emoji { font-size: 16px; }
+  .modality-pill img { width: 20px; height: 20px; object-fit: contain; }
   .article-feed { margin-bottom: 48px; }
   .article-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 12px; overflow: hidden; margin-bottom: 16px; text-decoration: none; color: inherit; transition: box-shadow 0.25s; }
   .article-featured:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
   .article-featured .thumb { background: linear-gradient(135deg, var(--pe-blue), var(--pe-blue-dark)); min-height: 220px; display: flex; align-items: center; justify-content: center; position: relative; }
-  .article-featured .thumb-label { font-family: var(--font-mono); font-size: 11px; color: var(--teal-300); letter-spacing: 0.08em; text-transform: uppercase; }
+  .article-featured .thumb-label { font-size: 11px; font-weight: 600; color: var(--teal-300); letter-spacing: 0.08em; text-transform: uppercase; }
   .article-featured .thumb svg { position: absolute; opacity: 0.08; }
   .article-featured .content { padding: 28px 28px 24px; display: flex; flex-direction: column; justify-content: center; }
   .article-tag { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--teal-700); background: var(--teal-100); padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; width: fit-content; }
   .article-tag.research { background: #EDE9FE; color: #6D28D9; }
   .article-tag.case-study { background: #FEF3C7; color: #92400E; }
   .article-tag.supplier { background: #E0F2FE; color: #0369A1; }
-  .article-featured h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--pe-grey-dark); line-height: 1.3; margin-bottom: 10px; }
+  .article-tag.basics { background: var(--teal-50); color: var(--teal-800); }
+  .article-featured h3 { font-size: 22px; font-weight: 700; color: var(--pe-grey-dark); line-height: 1.3; margin-bottom: 10px; }
   .article-featured .excerpt { font-size: 14px; color: var(--slate-600); line-height: 1.6; margin-bottom: 14px; }
   .article-meta { font-size: 12px; color: var(--slate-500); }
   .article-meta strong { color: var(--pe-grey-dark); font-weight: 600; }
@@ -136,7 +135,7 @@
   .article-item { display: grid; grid-template-columns: 100px 1fr; gap: 16px; padding: 14px; background: var(--white); border: 1px solid var(--slate-200); border-radius: 10px; text-decoration: none; color: inherit; transition: all 0.2s; align-items: center; }
   .article-item:hover { border-color: var(--teal-300); box-shadow: 0 2px 8px rgba(16,185,129,0.06); }
   .article-item .thumb { width: 100px; height: 72px; border-radius: 6px; background: linear-gradient(135deg, var(--pe-blue-light), var(--pe-blue-dark)); display: flex; align-items: center; justify-content: center; }
-  .article-item .thumb-label { font-family: var(--font-mono); font-size: 9px; color: var(--teal-300); letter-spacing: 0.06em; text-transform: uppercase; }
+  .article-item .thumb-label { font-size: 9px; font-weight: 600; color: var(--teal-300); letter-spacing: 0.06em; text-transform: uppercase; }
   .article-item h4 { font-size: 14px; font-weight: 600; color: var(--pe-grey-dark); line-height: 1.4; margin-bottom: 4px; }
   .article-item .excerpt { font-size: 12.5px; color: var(--slate-500); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .supplier-section { margin-bottom: 48px; }
@@ -152,32 +151,32 @@
   .shop-cta:hover { background: var(--teal-700); }
   .sidebar { display: flex; flex-direction: column; gap: 28px; }
   .sidebar-card { background: var(--white); border: 1px solid var(--slate-200); border-radius: 12px; padding: 24px; }
-  .sidebar-card h3 { font-size: 15px; font-weight: 700; color: var(--pe-grey-dark); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-  .sidebar-card h3 .icon { font-size: 16px; }
+  .sidebar-card h3 { font-size: 15px; font-weight: 700; color: var(--pe-grey-dark); margin-bottom: 16px; }
   .webinar-card { background: linear-gradient(135deg, var(--pe-blue-dark), var(--pe-blue)); border: 1px solid var(--pe-blue-light); color: var(--white); }
   .webinar-card h3 { color: var(--teal-300); }
   .webinar-item { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .webinar-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .webinar-date { font-family: var(--font-mono); font-size: 11px; color: var(--teal-400); letter-spacing: 0.04em; margin-bottom: 4px; }
+  .webinar-date { font-size: 11px; font-weight: 600; color: var(--teal-400); letter-spacing: 0.04em; margin-bottom: 4px; }
   .webinar-title { font-size: 13.5px; font-weight: 500; color: var(--slate-100); line-height: 1.4; }
   .download-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--slate-100); text-decoration: none; color: inherit; transition: opacity 0.2s; }
   .download-item:last-child { border-bottom: none; padding-bottom: 0; }
   .download-item:hover { opacity: 0.8; }
-  .download-icon { width: 36px; height: 36px; background: var(--teal-50); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .download-icon { width: 36px; height: 36px; background: var(--teal-50); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .download-icon img { width: 20px; height: 20px; object-fit: contain; }
   .download-title { font-size: 13px; font-weight: 600; color: var(--pe-grey-dark); line-height: 1.4; }
   .download-type { font-size: 11px; color: var(--slate-500); margin-top: 2px; }
   .newsletter-card { background: var(--pe-blue-50); border-color: var(--pe-blue-100); }
   .newsletter-card h3 { color: var(--pe-blue-dark); }
   .newsletter-card p { font-size: 13px; color: var(--pe-blue); line-height: 1.6; margin-bottom: 14px; }
   .newsletter-form { display: flex; flex-direction: column; gap: 8px; }
-  .newsletter-form input { padding: 10px 14px; border: 1px solid var(--pe-blue-100); border-radius: 6px; font-family: var(--font-body); font-size: 13px; outline: none; background: var(--white); }
+  .newsletter-form input { padding: 10px 14px; border: 1px solid var(--pe-blue-100); border-radius: 6px; font-size: 13px; outline: none; background: var(--white); }
   .newsletter-form input:focus { border-color: var(--pe-blue); }
-  .newsletter-form button { padding: 10px; background: var(--pe-blue); border: none; border-radius: 6px; color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.2s; }
+  .newsletter-form button { padding: 10px; background: var(--pe-blue); border: none; border-radius: 6px; color: var(--white); font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.2s; }
   .newsletter-form button:hover { background: var(--pe-blue-dark); }
   .trending-list { list-style: none; }
   .trending-list li { padding: 10px 0; border-bottom: 1px solid var(--slate-100); display: flex; align-items: center; gap: 10px; }
   .trending-list li:last-child { border-bottom: none; }
-  .trending-num { font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--teal-500); width: 20px; text-align: center; }
+  .trending-num { font-size: 12px; font-weight: 700; color: var(--teal-500); width: 20px; text-align: center; }
   .trending-text { font-size: 13px; color: var(--pe-grey); font-weight: 500; }
   .trending-text a { text-decoration: none; color: inherit; transition: color 0.2s; }
   .trending-text a:hover { color: var(--pe-blue); }
@@ -246,35 +245,35 @@
   <main>
 
     <div class="section-header">
-      <h2><span class="icon">&#9879;</span> Browse by Function</h2>
+      <h2>Browse by Function</h2>
       <a href="#" class="view-all">View All Functions &#8594;</a>
     </div>
     <div class="function-grid">
-      <a href="#" class="function-card"><div class="card-icon">&#127777;</div><div class="card-title">Stabilizers &amp; Cryoprotectants</div><div class="card-count">48 excipients &middot; 12 guides</div></a>
-      <a href="#" class="function-card"><div class="card-icon">&#129511;</div><div class="card-title">Surfactants</div><div class="card-count">24 excipients &middot; 8 guides</div></a>
-      <a href="#" class="function-card"><div class="card-icon">&#9878;</div><div class="card-title">Buffers &amp; pH Control</div><div class="card-count">32 excipients &middot; 6 guides</div></a>
-      <a href="#" class="function-card"><div class="card-icon">&#129516;</div><div class="card-title">Amino Acids &amp; Viscosity Modifiers</div><div class="card-count">28 excipients &middot; 9 guides</div></a>
-      <a href="#" class="function-card"><div class="card-icon">&#128300;</div><div class="card-title">Lipids &amp; LNP Components</div><div class="card-count">36 excipients &middot; 14 guides</div></a>
-      <a href="#" class="function-card"><div class="card-icon">&#10052;</div><div class="card-title">Lyoprotectants &amp; Bulking Agents</div><div class="card-count">22 excipients &middot; 7 guides</div></a>
-      <a href="#" class="function-card"><div class="card-icon">&#128167;</div><div class="card-title">Isotonicity &amp; Osmolality Agents</div><div class="card-count">18 excipients &middot; 5 guides</div></a>
-      <a href="#" class="function-card"><div class="card-icon">&#129514;</div><div class="card-title">Chelating &amp; Antioxidant Agents</div><div class="card-count">15 excipients &middot; 4 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-stabilizers.svg" alt="Stabilizers"></div><div class="card-title">Stabilizers &amp; Cryoprotectants</div><div class="card-count">48 excipients &middot; 12 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-surfactants.svg" alt="Surfactants"></div><div class="card-title">Surfactants</div><div class="card-count">24 excipients &middot; 8 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-buffers.svg" alt="Buffers"></div><div class="card-title">Buffers &amp; pH Control</div><div class="card-count">32 excipients &middot; 6 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-amino-acids.svg" alt="Amino Acids"></div><div class="card-title">Amino Acids &amp; Viscosity Modifiers</div><div class="card-count">28 excipients &middot; 9 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-lipids.svg" alt="Lipids"></div><div class="card-title">Lipids &amp; LNP Components</div><div class="card-count">36 excipients &middot; 14 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-lyoprotectants.svg" alt="Lyoprotectants"></div><div class="card-title">Lyoprotectants &amp; Bulking Agents</div><div class="card-count">22 excipients &middot; 7 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-isotonicity.svg" alt="Isotonicity"></div><div class="card-title">Isotonicity &amp; Osmolality Agents</div><div class="card-count">18 excipients &middot; 5 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-chelating.svg" alt="Chelating"></div><div class="card-title">Chelating &amp; Antioxidant Agents</div><div class="card-count">15 excipients &middot; 4 guides</div></a>
     </div>
 
     <div class="section-header">
-      <h2><span class="icon">&#127919;</span> Browse by Modality</h2>
+      <h2>Browse by Modality</h2>
     </div>
     <div class="modality-row">
-      <a href="#" class="modality-pill"><span class="emoji">&#129515;</span> Monoclonal Antibodies (mAbs)</a>
-      <a href="#" class="modality-pill"><span class="emoji">&#128256;</span> mRNA Therapeutics</a>
-      <a href="#" class="modality-pill"><span class="emoji">&#129440;</span> Vaccines</a>
-      <a href="#" class="modality-pill"><span class="emoji">&#128208;</span> Biosimilars</a>
-      <a href="#" class="modality-pill"><span class="emoji">&#129516;</span> Gene Therapy (AAV)</a>
-      <a href="#" class="modality-pill"><span class="emoji">&#129515;</span> Cell Therapy</a>
-      <a href="#" class="modality-pill"><span class="emoji">&#127919;</span> ADCs</a>
+      <a href="#" class="modality-pill"><img src="images/icon-mabs.svg" alt="mAbs"> Monoclonal Antibodies (mAbs)</a>
+      <a href="#" class="modality-pill"><img src="images/icon-mrna.svg" alt="mRNA"> mRNA Therapeutics</a>
+      <a href="#" class="modality-pill"><img src="images/icon-vaccines.svg" alt="Vaccines"> Vaccines</a>
+      <a href="#" class="modality-pill"><img src="images/icon-biosimilars.svg" alt="Biosimilars"> Biosimilars</a>
+      <a href="#" class="modality-pill"><img src="images/icon-gene-therapy.svg" alt="Gene Therapy"> Gene Therapy (AAV)</a>
+      <a href="#" class="modality-pill"><img src="images/icon-cell-therapy.svg" alt="Cell Therapy"> Cell Therapy</a>
+      <a href="#" class="modality-pill"><img src="images/icon-adcs.svg" alt="ADCs"> ADCs</a>
     </div>
 
     <div class="section-header">
-      <h2><span class="icon">&#128240;</span> BioPharma News &amp; Research</h2>
+      <h2>BioPharma News &amp; Research</h2>
       <a href="#" class="view-all">All Articles &#8594;</a>
     </div>
     <div class="article-feed">
@@ -306,8 +305,38 @@
       </div>
     </div>
 
+    <!-- BIOPHARMA BASICS -->
     <div class="section-header">
-      <h2><span class="icon">&#127981;</span> Sourcing &amp; Supplier Ecosystem</h2>
+      <h2>BioPharma Basics</h2>
+      <a href="#" class="view-all">All Basics Articles &#8594;</a>
+    </div>
+    <div class="article-feed">
+      <div class="article-list">
+        <a href="#" class="article-item">
+          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
+          <div><div class="article-tag basics">Basics</div><h4>What Are Biopharmaceutical Excipients? A Complete Introduction</h4><div class="excerpt">The essential guide to excipient roles in biologics -- from stabilizers and surfactants to buffers and cryoprotectants.</div></div>
+        </a>
+        <a href="#" class="article-item">
+          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
+          <div><div class="article-tag basics">Basics</div><h4>Monoclonal Antibody Formulation: Key Excipient Categories Explained</h4><div class="excerpt">Why mAbs need carefully selected excipients for stability, solubility, and shelf life -- and which categories matter most.</div></div>
+        </a>
+        <a href="#" class="article-item">
+          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
+          <div><div class="article-tag basics">Basics</div><h4>Understanding Lipid Nanoparticles (LNPs): Structure, Components, and Excipient Roles</h4><div class="excerpt">How ionizable lipids, PEG-lipids, cholesterol, and helper lipids work together in mRNA delivery systems.</div></div>
+        </a>
+        <a href="#" class="article-item">
+          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
+          <div><div class="article-tag basics">Basics</div><h4>Lyophilization of Biologics: Why Excipient Selection Makes or Breaks the Process</h4><div class="excerpt">From glass transition temperature to cake structure -- how excipients determine freeze-drying success.</div></div>
+        </a>
+        <a href="#" class="article-item">
+          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
+          <div><div class="article-tag basics">Basics</div><h4>Excipient Quality Standards for Injectable Biologics: USP, Ph. Eur., and Beyond</h4><div class="excerpt">Navigating compendial requirements, endotoxin limits, and GMP sourcing for parenteral formulations.</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2>Sourcing &amp; Supplier Ecosystem</h2>
       <a href="#" class="view-all">All BioPharma Suppliers &#8594;</a>
     </div>
     <div class="supplier-section">
@@ -337,22 +366,15 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-card webinar-card">
-      <h3><span class="icon">&#128161;</span> Upcoming Webinars</h3>
-      <div class="webinar-item"><div class="webinar-date">APR 15, 2026 &middot; 15:00 CET</div><div class="webinar-title">Polysorbate Degradation in Biologics: Mitigation Strategies</div></div>
-      <div class="webinar-item"><div class="webinar-date">APR 29, 2026 &middot; 16:00 CET</div><div class="webinar-title">LNP Scale-Up: From Lab to GMP Production</div></div>
-      <div class="webinar-item"><div class="webinar-date">MAY 13, 2026 &middot; 14:00 CET</div><div class="webinar-title">Excipient Quality Requirements for Parenteral Biologics</div></div>
+    <div class="sidebar-card">
+      <h3>Technical Downloads</h3>
+      <a href="#" class="download-item"><div class="download-icon"><img src="images/icon-pdf.svg" alt="PDF"></div><div><div class="download-title">Excipient Selection Guide for mAb Formulation</div><div class="download-type">PDF Guide &middot; 24 pages</div></div></a>
+      <a href="#" class="download-item"><div class="download-icon"><img src="images/icon-pdf.svg" alt="PDF"></div><div><div class="download-title">Top Excipients in Marketed Biologics 2026</div><div class="download-type">Benchmark Report &middot; 18 pages</div></div></a>
+      <a href="#" class="download-item"><div class="download-icon"><img src="images/icon-pdf.svg" alt="PDF"></div><div><div class="download-title">LNP Formulation Decision Tree</div><div class="download-type">Interactive Flowchart &middot; PDF</div></div></a>
     </div>
 
     <div class="sidebar-card">
-      <h3><span class="icon">&#128229;</span> Technical Downloads</h3>
-      <a href="#" class="download-item"><div class="download-icon">&#128211;</div><div><div class="download-title">Excipient Selection Guide for mAb Formulation</div><div class="download-type">PDF Guide &middot; 24 pages</div></div></a>
-      <a href="#" class="download-item"><div class="download-icon">&#128211;</div><div><div class="download-title">Top Excipients in Marketed Biologics 2026</div><div class="download-type">Benchmark Report &middot; 18 pages</div></div></a>
-      <a href="#" class="download-item"><div class="download-icon">&#128211;</div><div><div class="download-title">LNP Formulation Decision Tree</div><div class="download-type">Interactive Flowchart &middot; PDF</div></div></a>
-    </div>
-
-    <div class="sidebar-card">
-      <h3><span class="icon">&#128293;</span> Trending in BioPharma</h3>
+      <h3>Trending in BioPharma</h3>
       <ul class="trending-list">
         <li><span class="trending-num">01</span><span class="trending-text"><a href="#">PS80 oxidation in prefilled syringes</a></span></li>
         <li><span class="trending-num">02</span><span class="trending-text"><a href="#">Sucrose vs. trehalose in lyo mAbs</a></span></li>
@@ -362,8 +384,15 @@
       </ul>
     </div>
 
+    <div class="sidebar-card webinar-card">
+      <h3>Upcoming Webinars</h3>
+      <div class="webinar-item"><div class="webinar-date">APR 15, 2026 &middot; 15:00 CET</div><div class="webinar-title">Polysorbate Degradation in Biologics: Mitigation Strategies</div></div>
+      <div class="webinar-item"><div class="webinar-date">APR 29, 2026 &middot; 16:00 CET</div><div class="webinar-title">LNP Scale-Up: From Lab to GMP Production</div></div>
+      <div class="webinar-item"><div class="webinar-date">MAY 13, 2026 &middot; 14:00 CET</div><div class="webinar-title">Excipient Quality Requirements for Parenteral Biologics</div></div>
+    </div>
+
     <div class="sidebar-card newsletter-card">
-      <h3><span class="icon">&#128236;</span> BioPharma Digest</h3>
+      <h3>BioPharma Digest</h3>
       <p>Monthly curated briefing: new excipient research, supplier updates, and formulation problem-solvers. Exclusively for biopharma formulators.</p>
       <div class="newsletter-form">
         <input type="email" placeholder="you@company.com">
