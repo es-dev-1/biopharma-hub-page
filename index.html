@@ -44,24 +44,8 @@
     --header-height: 56px;
   }
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: var(--font-body);
-    color: var(--pe-grey);
-    background: var(--white);
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.6;
-  }
-  .site-header {
-    background: var(--pe-blue);
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    padding: 0 24px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--pe-blue-dark);
-  }
+  body { font-family: var(--font-body); color: var(--pe-grey); background: var(--white); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+  .site-header { background: var(--pe-blue); height: var(--header-height); display: flex; align-items: center; padding: 0 24px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--pe-blue-dark); }
   .site-header .logo { font-weight: 700; font-size: 15px; color: var(--white); letter-spacing: -0.02em; }
   .site-header .logo span { color: #8bb8e0; }
   .site-header nav { margin-left: auto; display: flex; gap: 0; }
@@ -75,6 +59,8 @@
   .biopharma-subnav a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
   .biopharma-subnav a.active { color: var(--white); }
   .biopharma-subnav a.active::after { content: ''; position: absolute; bottom: 0; left: 12px; right: 12px; height: 2px; background: var(--teal-400); border-radius: 1px; }
+
+  /* Hero banner */
   .hero { position: relative; background: var(--pe-blue-dark); overflow: hidden; padding: 72px 24px 64px; }
   .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 20% 80%, rgba(16,185,129,0.15) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(48,90,140,0.25) 0%, transparent 70%); pointer-events: none; }
   .hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle 1px at center, rgba(16,185,129,0.15) 0%, transparent 100%); background-size: 48px 48px; opacity: 0.5; pointer-events: none; }
@@ -86,16 +72,23 @@
   @keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   .hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; max-width: 700px; margin-bottom: 16px; animation: fadeInUp 0.7s ease-out 0.1s both; }
   .hero h1 .accent { background: linear-gradient(135deg, var(--teal-400), #8bb8e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .hero p { font-size: 17px; color: var(--slate-400); max-width: 560px; line-height: 1.7; margin-bottom: 32px; animation: fadeInUp 0.7s ease-out 0.2s both; }
-  .hero-search { display: flex; gap: 0; max-width: 540px; animation: fadeInUp 0.7s ease-out 0.3s both; }
-  .hero-search input { flex: 1; padding: 14px 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-right: none; border-radius: 8px 0 0 8px; color: var(--white); font-size: 14px; outline: none; transition: border-color 0.2s, background 0.2s; }
-  .hero-search input::placeholder { color: rgba(255,255,255,0.45); }
-  .hero-search input:focus { background: rgba(255,255,255,0.14); border-color: var(--teal-400); }
-  .hero-search button { padding: 14px 28px; background: var(--teal-600); border: 1px solid var(--teal-500); border-radius: 0 8px 8px 0; color: var(--white); font-weight: 600; font-size: 14px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
-  .hero-search button:hover { background: var(--teal-700); }
-  .hero-stats { display: flex; gap: 40px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); animation: fadeInUp 0.7s ease-out 0.4s both; }
+  .hero p { font-size: 17px; color: var(--slate-400); max-width: 560px; line-height: 1.7; margin-bottom: 0; animation: fadeInUp 0.7s ease-out 0.2s both; }
+  .hero-stats { display: flex; gap: 40px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); animation: fadeInUp 0.7s ease-out 0.3s both; }
   .hero-stat .num { font-size: 24px; font-weight: 700; color: var(--teal-400); }
   .hero-stat .label { font-size: 12px; color: var(--slate-500); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* Shop search banner */
+  .shop-banner { background: var(--teal-900); padding: 40px 24px; text-align: center; }
+  .shop-banner-inner { max-width: 600px; margin: 0 auto; }
+  .shop-banner h2 { font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 20px; }
+  .shop-search { display: flex; gap: 0; max-width: 540px; margin: 0 auto; }
+  .shop-search input { flex: 1; padding: 14px 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-right: none; border-radius: 8px 0 0 8px; color: var(--white); font-size: 14px; outline: none; transition: border-color 0.2s, background 0.2s; }
+  .shop-search input::placeholder { color: rgba(255,255,255,0.45); }
+  .shop-search input:focus { background: rgba(255,255,255,0.14); border-color: var(--teal-400); }
+  .shop-search button { padding: 14px 28px; background: var(--teal-600); border: 1px solid var(--teal-500); border-radius: 0 8px 8px 0; color: var(--white); font-weight: 600; font-size: 14px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+  .shop-search button:hover { background: var(--teal-700); }
+
+  /* Main layout */
   .main-layout { max-width: var(--max-width); margin: 0 auto; padding: 40px 24px; display: grid; grid-template-columns: 1fr 340px; gap: 48px; }
   @media (max-width: 960px) { .main-layout { grid-template-columns: 1fr; gap: 40px; } }
   .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--slate-100); }
@@ -193,6 +186,8 @@
     .article-item .thumb { width: 80px; height: 60px; }
     .function-grid { grid-template-columns: repeat(2, 1fr); }
     .site-header nav { display: none; }
+    .shop-banner { padding: 32px 20px; }
+    .shop-banner h2 { font-size: 18px; }
   }
 </style>
 </head>
@@ -221,6 +216,7 @@
   <a href="#">Downloads</a>
 </nav>
 
+<!-- HERO BANNER -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-badge">
@@ -228,11 +224,7 @@
       BioPharma Excipients Hub
     </div>
     <h1>Excipients for <span class="accent">Biologics, Biosimilars &amp; Advanced Therapies</span></h1>
-    <p>Challenge-first resources for formulation scientists. Stabilize your mAb, optimize your LNP, or find injectable-grade materials -- all in one place.</p>
-    <div class="hero-search">
-      <input type="text" placeholder='Search biopharma excipients, e.g. "polysorbate 80 aggregation"'>
-      <button>Search</button>
-    </div>
+    <p>Challenge-first resources for formulation scientists. Stabilize your mAb, optimize your LNP, or find injectable-grade materials - all in one place.</p>
     <div class="hero-stats">
       <div class="hero-stat"><div class="num">240+</div><div class="label">Excipient Monographs</div></div>
       <div class="hero-stat"><div class="num">85</div><div class="label">Problem-Solution Guides</div></div>
@@ -241,6 +233,18 @@
   </div>
 </section>
 
+<!-- SHOP SEARCH BANNER -->
+<section class="shop-banner">
+  <div class="shop-banner-inner">
+    <h2>Shop Your Biopharma Excipient</h2>
+    <div class="shop-search">
+      <input type="text" placeholder='Search products, e.g. "polysorbate 80" or "trehalose GMP"'>
+      <button>Search</button>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT + SIDEBAR -->
 <div class="main-layout">
   <main>
 
@@ -296,7 +300,7 @@
         </a>
         <a href="#" class="article-item">
           <div class="thumb"><span class="thumb-label">Lyophilization</span></div>
-          <div><div class="article-tag case-study">What Went Wrong</div><h4>Cake Collapse in a Lyophilized Biosimilar: Root Cause Analysis</h4><div class="excerpt">A case study on how Tg' miscalculation led to critical batch failures -- and the excipient-ratio fix.</div></div>
+          <div><div class="article-tag case-study">What Went Wrong</div><h4>Cake Collapse in a Lyophilized Biosimilar: Root Cause Analysis</h4><div class="excerpt">A case study on how Tg' miscalculation led to critical batch failures - and the excipient-ratio fix.</div></div>
         </a>
         <a href="#" class="article-item">
           <div class="thumb"><span class="thumb-label">Vaccines</span></div>
@@ -314,11 +318,11 @@
       <div class="article-list">
         <a href="#" class="article-item">
           <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
-          <div><div class="article-tag basics">Basics</div><h4>What Are Biopharmaceutical Excipients? A Complete Introduction</h4><div class="excerpt">The essential guide to excipient roles in biologics -- from stabilizers and surfactants to buffers and cryoprotectants.</div></div>
+          <div><div class="article-tag basics">Basics</div><h4>What Are Biopharmaceutical Excipients? A Complete Introduction</h4><div class="excerpt">The essential guide to excipient roles in biologics - from stabilizers and surfactants to buffers and cryoprotectants.</div></div>
         </a>
         <a href="#" class="article-item">
           <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
-          <div><div class="article-tag basics">Basics</div><h4>Monoclonal Antibody Formulation: Key Excipient Categories Explained</h4><div class="excerpt">Why mAbs need carefully selected excipients for stability, solubility, and shelf life -- and which categories matter most.</div></div>
+          <div><div class="article-tag basics">Basics</div><h4>Monoclonal Antibody Formulation: Key Excipient Categories Explained</h4><div class="excerpt">Why mAbs need carefully selected excipients for stability, solubility, and shelf life - and which categories matter most.</div></div>
         </a>
         <a href="#" class="article-item">
           <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
@@ -326,7 +330,7 @@
         </a>
         <a href="#" class="article-item">
           <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
-          <div><div class="article-tag basics">Basics</div><h4>Lyophilization of Biologics: Why Excipient Selection Makes or Breaks the Process</h4><div class="excerpt">From glass transition temperature to cake structure -- how excipients determine freeze-drying success.</div></div>
+          <div><div class="article-tag basics">Basics</div><h4>Lyophilization of Biologics: Why Excipient Selection Makes or Breaks the Process</h4><div class="excerpt">From glass transition temperature to cake structure - how excipients determine freeze-drying success.</div></div>
         </a>
         <a href="#" class="article-item">
           <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
@@ -404,7 +408,7 @@
 </div>
 
 <footer class="biopharma-footer">
-  <p>BioPharma Excipients is a dedicated section of <a href="#">PharmaExcipients.com</a> -- the global B2B platform for pharmaceutical excipient information and sourcing.</p>
+  <p>BioPharma Excipients is a dedicated section of <a href="#">PharmaExcipients.com</a> - the global B2B platform for pharmaceutical excipient information and sourcing.</p>
 </footer>
 
 </body>
