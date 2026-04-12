@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BioPharma Excipients — PharmaExcipients.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pe-grey: #575756;
+    --pe-blue: #305a8c;
+    --pe-blue-dark: #24456b;
+    --pe-blue-light: #3d6fa8;
+    --pe-blue-50: #eaf1f8;
+    --pe-blue-100: #d0dfef;
+    --pe-grey-dark: #3d3d3c;
+    --pe-grey-light: #787877;
+    --pe-grey-100: #f0f0ef;
+    --teal-900: #064E3B;
+    --teal-800: #065F46;
+    --teal-700: #047857;
+    --teal-600: #059669;
+    --teal-500: #10B981;
+    --teal-400: #34D399;
+    --teal-300: #6EE7B7;
+    --teal-200: #A7F3D0;
+    --teal-100: #D1FAE5;
+    --teal-50:  #ECFDF5;
+    --slate-950: #1a1a19;
+    --slate-900: #2b2b2a;
+    --slate-800: #3d3d3c;
+    --slate-700: #575756;
+    --slate-600: #6b6b6a;
+    --slate-500: #8a8a89;
+    --slate-400: #a3a3a2;
+    --slate-300: #c4c4c3;
+    --slate-200: #dededc;
+    --slate-100: #efefee;
+    --slate-50:  #f7f7f6;
+    --white: #FFFFFF;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --max-width: 1280px;
+    --header-height: 56px;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--font-body);
+    color: var(--pe-grey);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  .site-header {
+    background: var(--pe-blue);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--pe-blue-dark);
+  }
+  .site-header .logo { font-family: var(--font-body); font-weight: 700; font-size: 15px; color: var(--white); letter-spacing: -0.02em; }
+  .site-header .logo span { color: #8bb8e0; }
+  .site-header nav { margin-left: auto; display: flex; gap: 0; }
+  .site-header nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; font-weight: 500; padding: 16px 18px; transition: color 0.2s, background 0.2s; position: relative; }
+  .site-header nav a:hover { color: var(--white); }
+  .site-header nav a.active { color: var(--teal-300); background: rgba(16, 185, 129, 0.12); }
+  .site-header nav a.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--teal-400); }
+  .biopharma-subnav { background: var(--teal-900); padding: 0 24px; display: flex; align-items: center; gap: 0; position: sticky; top: var(--header-height); z-index: 99; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .biopharma-subnav::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(90deg, rgba(6,78,59,0) 0%, rgba(16,185,129,0.06) 50%, rgba(6,78,59,0) 100%); pointer-events: none; }
+  .biopharma-subnav a { color: var(--teal-200); text-decoration: none; font-size: 12.5px; font-weight: 500; padding: 12px 16px; white-space: nowrap; transition: color 0.2s, background 0.2s; position: relative; letter-spacing: 0.01em; }
+  .biopharma-subnav a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+  .biopharma-subnav a.active { color: var(--white); }
+  .biopharma-subnav a.active::after { content: ''; position: absolute; bottom: 0; left: 12px; right: 12px; height: 2px; background: var(--teal-400); border-radius: 1px; }
+  .hero { position: relative; background: var(--pe-blue-dark); overflow: hidden; padding: 72px 24px 64px; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 20% 80%, rgba(16,185,129,0.15) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(48,90,140,0.25) 0%, transparent 70%); pointer-events: none; }
+  .hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle 1px at center, rgba(16,185,129,0.15) 0%, transparent 100%); background-size: 48px 48px; opacity: 0.5; pointer-events: none; }
+  .hero-inner { max-width: var(--max-width); margin: 0 auto; position: relative; z-index: 1; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); border-radius: 100px; padding: 6px 16px 6px 8px; font-size: 12px; font-weight: 600; color: var(--teal-300); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 24px; animation: fadeInDown 0.6s ease-out; }
+  .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal-400); animation: pulse-dot 2s ease-in-out infinite; }
+  @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+  @keyframes fadeInDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .hero h1 { font-family: var(--font-display); font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; max-width: 700px; margin-bottom: 16px; animation: fadeInUp 0.7s ease-out 0.1s both; }
+  .hero h1 .accent { background: linear-gradient(135deg, var(--teal-400), #8bb8e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero p { font-size: 17px; color: var(--slate-400); max-width: 560px; line-height: 1.7; margin-bottom: 32px; animation: fadeInUp 0.7s ease-out 0.2s both; }
+  .hero-search { display: flex; gap: 0; max-width: 540px; animation: fadeInUp 0.7s ease-out 0.3s both; }
+  .hero-search input { flex: 1; padding: 14px 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-right: none; border-radius: 8px 0 0 8px; color: var(--white); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s, background 0.2s; }
+  .hero-search input::placeholder { color: rgba(255,255,255,0.45); }
+  .hero-search input:focus { background: rgba(255,255,255,0.14); border-color: var(--teal-400); }
+  .hero-search button { padding: 14px 28px; background: var(--teal-600); border: 1px solid var(--teal-500); border-radius: 0 8px 8px 0; color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 14px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+  .hero-search button:hover { background: var(--teal-700); }
+  .hero-stats { display: flex; gap: 40px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); animation: fadeInUp 0.7s ease-out 0.4s both; }
+  .hero-stat .num { font-family: var(--font-mono); font-size: 24px; font-weight: 500; color: var(--teal-400); }
+  .hero-stat .label { font-size: 12px; color: var(--slate-500); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .main-layout { max-width: var(--max-width); margin: 0 auto; padding: 40px 24px; display: grid; grid-template-columns: 1fr 340px; gap: 48px; }
+  @media (max-width: 960px) { .main-layout { grid-template-columns: 1fr; gap: 40px; } }
+  .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--slate-100); }
+  .section-header h2 { font-family: var(--font-body); font-size: 20px; font-weight: 700; color: var(--pe-grey-dark); display: flex; align-items: center; gap: 10px; }
+  .section-header h2 .icon { width: 28px; height: 28px; background: var(--teal-50); border: 1px solid var(--teal-200); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .section-header .view-all { font-size: 13px; font-weight: 600; color: var(--pe-blue); text-decoration: none; transition: color 0.2s; }
+  .section-header .view-all:hover { color: var(--pe-blue-dark); }
+  .function-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 48px; }
+  .function-card { background: var(--white); border: 1px solid var(--slate-200); border-radius: 10px; padding: 20px 18px; text-decoration: none; color: var(--pe-grey); transition: all 0.25s ease; position: relative; overflow: hidden; }
+  .function-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--teal-500); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+  .function-card:hover { border-color: var(--teal-300); box-shadow: 0 4px 16px rgba(16,185,129,0.08); transform: translateY(-2px); }
+  .function-card:hover::before { transform: scaleX(1); }
+  .function-card .card-icon { width: 40px; height: 40px; border-radius: 8px; background: var(--teal-50); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 12px; }
+  .function-card .card-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; line-height: 1.3; }
+  .function-card .card-count { font-size: 12px; color: var(--slate-500); }
+  .modality-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 48px; }
+  .modality-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 100px; text-decoration: none; color: var(--pe-grey); font-size: 13.5px; font-weight: 500; transition: all 0.2s; }
+  .modality-pill:hover { background: var(--teal-50); border-color: var(--teal-300); color: var(--teal-800); }
+  .modality-pill .emoji { font-size: 16px; }
+  .article-feed { margin-bottom: 48px; }
+  .article-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 12px; overflow: hidden; margin-bottom: 16px; text-decoration: none; color: inherit; transition: box-shadow 0.25s; }
+  .article-featured:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+  .article-featured .thumb { background: linear-gradient(135deg, var(--pe-blue), var(--pe-blue-dark)); min-height: 220px; display: flex; align-items: center; justify-content: center; position: relative; }
+  .article-featured .thumb-label { font-family: var(--font-mono); font-size: 11px; color: var(--teal-300); letter-spacing: 0.08em; text-transform: uppercase; }
+  .article-featured .thumb svg { position: absolute; opacity: 0.08; }
+  .article-featured .content { padding: 28px 28px 24px; display: flex; flex-direction: column; justify-content: center; }
+  .article-tag { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--teal-700); background: var(--teal-100); padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; width: fit-content; }
+  .article-tag.research { background: #EDE9FE; color: #6D28D9; }
+  .article-tag.case-study { background: #FEF3C7; color: #92400E; }
+  .article-tag.supplier { background: #E0F2FE; color: #0369A1; }
+  .article-featured h3 { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--pe-grey-dark); line-height: 1.3; margin-bottom: 10px; }
+  .article-featured .excerpt { font-size: 14px; color: var(--slate-600); line-height: 1.6; margin-bottom: 14px; }
+  .article-meta { font-size: 12px; color: var(--slate-500); }
+  .article-meta strong { color: var(--pe-grey-dark); font-weight: 600; }
+  .article-list { display: flex; flex-direction: column; gap: 12px; }
+  .article-item { display: grid; grid-template-columns: 100px 1fr; gap: 16px; padding: 14px; background: var(--white); border: 1px solid var(--slate-200); border-radius: 10px; text-decoration: none; color: inherit; transition: all 0.2s; align-items: center; }
+  .article-item:hover { border-color: var(--teal-300); box-shadow: 0 2px 8px rgba(16,185,129,0.06); }
+  .article-item .thumb { width: 100px; height: 72px; border-radius: 6px; background: linear-gradient(135deg, var(--pe-blue-light), var(--pe-blue-dark)); display: flex; align-items: center; justify-content: center; }
+  .article-item .thumb-label { font-family: var(--font-mono); font-size: 9px; color: var(--teal-300); letter-spacing: 0.06em; text-transform: uppercase; }
+  .article-item h4 { font-size: 14px; font-weight: 600; color: var(--pe-grey-dark); line-height: 1.4; margin-bottom: 4px; }
+  .article-item .excerpt { font-size: 12.5px; color: var(--slate-500); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .supplier-section { margin-bottom: 48px; }
+  .supplier-logos { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+  .supplier-logo { width: 140px; height: 64px; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.04em; transition: all 0.2s; }
+  .supplier-logo:hover { border-color: var(--teal-300); background: var(--teal-50); color: var(--teal-700); }
+  .shop-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .filter-chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: var(--white); border: 1.5px solid var(--teal-300); border-radius: 6px; font-size: 12.5px; font-weight: 500; color: var(--teal-700); text-decoration: none; transition: all 0.2s; }
+  .filter-chip:hover { background: var(--teal-600); border-color: var(--teal-600); color: var(--white); }
+  .filter-chip .check { width: 14px; height: 14px; border: 1.5px solid var(--teal-400); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 10px; transition: all 0.2s; }
+  .filter-chip:hover .check { border-color: var(--white); background: rgba(255,255,255,0.2); }
+  .shop-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--teal-600); color: var(--white); border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s; }
+  .shop-cta:hover { background: var(--teal-700); }
+  .sidebar { display: flex; flex-direction: column; gap: 28px; }
+  .sidebar-card { background: var(--white); border: 1px solid var(--slate-200); border-radius: 12px; padding: 24px; }
+  .sidebar-card h3 { font-size: 15px; font-weight: 700; color: var(--pe-grey-dark); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .sidebar-card h3 .icon { font-size: 16px; }
+  .webinar-card { background: linear-gradient(135deg, var(--pe-blue-dark), var(--pe-blue)); border: 1px solid var(--pe-blue-light); color: var(--white); }
+  .webinar-card h3 { color: var(--teal-300); }
+  .webinar-item { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .webinar-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .webinar-date { font-family: var(--font-mono); font-size: 11px; color: var(--teal-400); letter-spacing: 0.04em; margin-bottom: 4px; }
+  .webinar-title { font-size: 13.5px; font-weight: 500; color: var(--slate-100); line-height: 1.4; }
+  .download-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--slate-100); text-decoration: none; color: inherit; transition: opacity 0.2s; }
+  .download-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .download-item:hover { opacity: 0.8; }
+  .download-icon { width: 36px; height: 36px; background: var(--teal-50); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .download-title { font-size: 13px; font-weight: 600; color: var(--pe-grey-dark); line-height: 1.4; }
+  .download-type { font-size: 11px; color: var(--slate-500); margin-top: 2px; }
+  .newsletter-card { background: var(--pe-blue-50); border-color: var(--pe-blue-100); }
+  .newsletter-card h3 { color: var(--pe-blue-dark); }
+  .newsletter-card p { font-size: 13px; color: var(--pe-blue); line-height: 1.6; margin-bottom: 14px; }
+  .newsletter-form { display: flex; flex-direction: column; gap: 8px; }
+  .newsletter-form input { padding: 10px 14px; border: 1px solid var(--pe-blue-100); border-radius: 6px; font-family: var(--font-body); font-size: 13px; outline: none; background: var(--white); }
+  .newsletter-form input:focus { border-color: var(--pe-blue); }
+  .newsletter-form button { padding: 10px; background: var(--pe-blue); border: none; border-radius: 6px; color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.2s; }
+  .newsletter-form button:hover { background: var(--pe-blue-dark); }
+  .trending-list { list-style: none; }
+  .trending-list li { padding: 10px 0; border-bottom: 1px solid var(--slate-100); display: flex; align-items: center; gap: 10px; }
+  .trending-list li:last-child { border-bottom: none; }
+  .trending-num { font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--teal-500); width: 20px; text-align: center; }
+  .trending-text { font-size: 13px; color: var(--pe-grey); font-weight: 500; }
+  .trending-text a { text-decoration: none; color: inherit; transition: color 0.2s; }
+  .trending-text a:hover { color: var(--pe-blue); }
+  .biopharma-footer { background: var(--slate-50); border-top: 1px solid var(--slate-200); padding: 32px 24px; text-align: center; }
+  .biopharma-footer p { font-size: 13px; color: var(--slate-500); max-width: 600px; margin: 0 auto; }
+  .biopharma-footer a { color: var(--pe-blue); text-decoration: none; font-weight: 600; }
+  @media (max-width: 768px) {
+    .hero { padding: 48px 20px 40px; }
+    .hero h1 { font-size: 28px; }
+    .hero-stats { gap: 24px; flex-wrap: wrap; }
+    .article-featured { grid-template-columns: 1fr; }
+    .article-featured .thumb { min-height: 140px; }
+    .article-item { grid-template-columns: 80px 1fr; gap: 12px; }
+    .article-item .thumb { width: 80px; height: 60px; }
+    .function-grid { grid-template-columns: repeat(2, 1fr); }
+    .site-header nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">Pharma<span>Excipients</span>.com</div>
+  <nav>
+    <a href="#">Excipients</a>
+    <a href="#">News</a>
+    <a href="#" class="active">BioPharma</a>
+    <a href="#">Shop</a>
+    <a href="#">Suppliers</a>
+    <a href="#">Events</a>
+  </nav>
+</header>
+
+<nav class="biopharma-subnav">
+  <a href="#" class="active">Overview</a>
+  <a href="#">By Function</a>
+  <a href="#">By Modality</a>
+  <a href="#">Research</a>
+  <a href="#">Suppliers</a>
+  <a href="#">Shop BioPharma</a>
+  <a href="#">Webinars</a>
+  <a href="#">Downloads</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      BioPharma Excipients Hub
+    </div>
+    <h1>Excipients for <span class="accent">Biologics, Biosimilars &amp; Advanced Therapies</span></h1>
+    <p>Challenge-first resources for formulation scientists. Stabilize your mAb, optimize your LNP, or find injectable-grade materials -- all in one place.</p>
+    <div class="hero-search">
+      <input type="text" placeholder='Search biopharma excipients, e.g. "polysorbate 80 aggregation"'>
+      <button>Search</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">240+</div><div class="label">Excipient Monographs</div></div>
+      <div class="hero-stat"><div class="num">85</div><div class="label">Problem-Solution Guides</div></div>
+      <div class="hero-stat"><div class="num">36</div><div class="label">Verified Suppliers</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="main-layout">
+  <main>
+
+    <div class="section-header">
+      <h2><span class="icon">&#9879;</span> Browse by Function</h2>
+      <a href="#" class="view-all">View All Functions &#8594;</a>
+    </div>
+    <div class="function-grid">
+      <a href="#" class="function-card"><div class="card-icon">&#127777;</div><div class="card-title">Stabilizers &amp; Cryoprotectants</div><div class="card-count">48 excipients &middot; 12 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon">&#129511;</div><div class="card-title">Surfactants</div><div class="card-count">24 excipients &middot; 8 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon">&#9878;</div><div class="card-title">Buffers &amp; pH Control</div><div class="card-count">32 excipients &middot; 6 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon">&#129516;</div><div class="card-title">Amino Acids &amp; Viscosity Modifiers</div><div class="card-count">28 excipients &middot; 9 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon">&#128300;</div><div class="card-title">Lipids &amp; LNP Components</div><div class="card-count">36 excipients &middot; 14 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon">&#10052;</div><div class="card-title">Lyoprotectants &amp; Bulking Agents</div><div class="card-count">22 excipients &middot; 7 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon">&#128167;</div><div class="card-title">Isotonicity &amp; Osmolality Agents</div><div class="card-count">18 excipients &middot; 5 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon">&#129514;</div><div class="card-title">Chelating &amp; Antioxidant Agents</div><div class="card-count">15 excipients &middot; 4 guides</div></a>
+    </div>
+
+    <div class="section-header">
+      <h2><span class="icon">&#127919;</span> Browse by Modality</h2>
+    </div>
+    <div class="modality-row">
+      <a href="#" class="modality-pill"><span class="emoji">&#129515;</span> Monoclonal Antibodies (mAbs)</a>
+      <a href="#" class="modality-pill"><span class="emoji">&#128256;</span> mRNA Therapeutics</a>
+      <a href="#" class="modality-pill"><span class="emoji">&#129440;</span> Vaccines</a>
+      <a href="#" class="modality-pill"><span class="emoji">&#128208;</span> Biosimilars</a>
+      <a href="#" class="modality-pill"><span class="emoji">&#129516;</span> Gene Therapy (AAV)</a>
+      <a href="#" class="modality-pill"><span class="emoji">&#129515;</span> Cell Therapy</a>
+      <a href="#" class="modality-pill"><span class="emoji">&#127919;</span> ADCs</a>
+    </div>
+
+    <div class="section-header">
+      <h2><span class="icon">&#128240;</span> BioPharma News &amp; Research</h2>
+      <a href="#" class="view-all">All Articles &#8594;</a>
+    </div>
+    <div class="article-feed">
+      <a href="#" class="article-featured">
+        <div class="thumb">
+          <span class="thumb-label">Featured Research</span>
+          <svg width="200" height="200" viewBox="0 0 200 200"><circle cx="60" cy="80" r="20" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="120" cy="60" r="15" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="140" cy="120" r="25" fill="none" stroke="currentColor" stroke-width="1"/><line x1="80" y1="80" x2="105" y2="60" stroke="currentColor" stroke-width="1"/><line x1="135" y1="75" x2="140" y2="95" stroke="currentColor" stroke-width="1"/></svg>
+        </div>
+        <div class="content">
+          <div class="article-tag">Problem-Solution Guide</div>
+          <h3>How to Prevent Polysorbate Degradation in High-Concentration mAb Formulations</h3>
+          <div class="excerpt">New data shows that oxidative and enzymatic degradation pathways in PS80 can be mitigated through specific buffering strategies and antioxidant co-excipients.</div>
+          <div class="article-meta"><strong>Dr. Anna Kessler</strong> &middot; Mar 28, 2026 &middot; 12 min read</div>
+        </div>
+      </a>
+      <div class="article-list">
+        <a href="#" class="article-item">
+          <div class="thumb"><span class="thumb-label">mRNA / LNP</span></div>
+          <div><div class="article-tag research">Research</div><h4>Ionizable Lipid Screening for Next-Gen LNP Platforms</h4><div class="excerpt">A comparative analysis of MC3, SM-102, and ALC-0315 stability across different storage conditions.</div></div>
+        </a>
+        <a href="#" class="article-item">
+          <div class="thumb"><span class="thumb-label">Lyophilization</span></div>
+          <div><div class="article-tag case-study">What Went Wrong</div><h4>Cake Collapse in a Lyophilized Biosimilar: Root Cause Analysis</h4><div class="excerpt">A case study on how Tg' miscalculation led to critical batch failures -- and the excipient-ratio fix.</div></div>
+        </a>
+        <a href="#" class="article-item">
+          <div class="thumb"><span class="thumb-label">Vaccines</span></div>
+          <div><div class="article-tag supplier">Supplier Spotlight</div><h4>GMP-Grade Trehalose Supply Chain: 2026 Market Overview</h4><div class="excerpt">Which suppliers can guarantee USP/EP-compliant trehalose for parenteral vaccines at scale?</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2><span class="icon">&#127981;</span> Sourcing &amp; Supplier Ecosystem</h2>
+      <a href="#" class="view-all">All BioPharma Suppliers &#8594;</a>
+    </div>
+    <div class="supplier-section">
+      <div class="supplier-logos">
+        <div class="supplier-logo">Roquette</div>
+        <div class="supplier-logo">BASF Pharma</div>
+        <div class="supplier-logo">Croda</div>
+        <div class="supplier-logo">Merck KGaA</div>
+        <div class="supplier-logo">Evonik</div>
+        <div class="supplier-logo">NOF Corp</div>
+        <div class="supplier-logo">Pfanstiehl</div>
+        <div class="supplier-logo">BroadPharm</div>
+      </div>
+      <p style="font-size:14px; font-weight:600; color:var(--pe-grey-dark); margin-bottom:12px;">Shop by BioPharma Specification:</p>
+      <div class="shop-filters">
+        <a href="#" class="filter-chip"><span class="check"></span> Injectable Grade</a>
+        <a href="#" class="filter-chip"><span class="check"></span> Low Endotoxin</a>
+        <a href="#" class="filter-chip"><span class="check"></span> Parenteral Use</a>
+        <a href="#" class="filter-chip"><span class="check"></span> GMP Lipids</a>
+        <a href="#" class="filter-chip"><span class="check"></span> USP/EP Compliant</a>
+        <a href="#" class="filter-chip"><span class="check"></span> Lyophilization Grade</a>
+      </div>
+      <a href="#" class="shop-cta">Browse BioPharma Shop &#8594;</a>
+    </div>
+
+  </main>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-card webinar-card">
+      <h3><span class="icon">&#128161;</span> Upcoming Webinars</h3>
+      <div class="webinar-item"><div class="webinar-date">APR 15, 2026 &middot; 15:00 CET</div><div class="webinar-title">Polysorbate Degradation in Biologics: Mitigation Strategies</div></div>
+      <div class="webinar-item"><div class="webinar-date">APR 29, 2026 &middot; 16:00 CET</div><div class="webinar-title">LNP Scale-Up: From Lab to GMP Production</div></div>
+      <div class="webinar-item"><div class="webinar-date">MAY 13, 2026 &middot; 14:00 CET</div><div class="webinar-title">Excipient Quality Requirements for Parenteral Biologics</div></div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3><span class="icon">&#128229;</span> Technical Downloads</h3>
+      <a href="#" class="download-item"><div class="download-icon">&#128211;</div><div><div class="download-title">Excipient Selection Guide for mAb Formulation</div><div class="download-type">PDF Guide &middot; 24 pages</div></div></a>
+      <a href="#" class="download-item"><div class="download-icon">&#128211;</div><div><div class="download-title">Top Excipients in Marketed Biologics 2026</div><div class="download-type">Benchmark Report &middot; 18 pages</div></div></a>
+      <a href="#" class="download-item"><div class="download-icon">&#128211;</div><div><div class="download-title">LNP Formulation Decision Tree</div><div class="download-type">Interactive Flowchart &middot; PDF</div></div></a>
+    </div>
+
+    <div class="sidebar-card">
+      <h3><span class="icon">&#128293;</span> Trending in BioPharma</h3>
+      <ul class="trending-list">
+        <li><span class="trending-num">01</span><span class="trending-text"><a href="#">PS80 oxidation in prefilled syringes</a></span></li>
+        <li><span class="trending-num">02</span><span class="trending-text"><a href="#">Sucrose vs. trehalose in lyo mAbs</a></span></li>
+        <li><span class="trending-num">03</span><span class="trending-text"><a href="#">Arginine as viscosity reducer</a></span></li>
+        <li><span class="trending-num">04</span><span class="trending-text"><a href="#">SM-102 vs. ALC-0315 LNP stability</a></span></li>
+        <li><span class="trending-num">05</span><span class="trending-text"><a href="#">Low-endotoxin excipient sourcing</a></span></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card newsletter-card">
+      <h3><span class="icon">&#128236;</span> BioPharma Digest</h3>
+      <p>Monthly curated briefing: new excipient research, supplier updates, and formulation problem-solvers. Exclusively for biopharma formulators.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="you@company.com">
+        <button>Subscribe to BioPharma Digest</button>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<footer class="biopharma-footer">
+  <p>BioPharma Excipients is a dedicated section of <a href="#">PharmaExcipients.com</a> -- the global B2B platform for pharmaceutical excipient information and sourcing.</p>
+</footer>
+
+</body>
+</html>
