@@ -73,9 +73,6 @@
   .hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; max-width: 700px; margin-bottom: 16px; animation: fadeInUp 0.7s ease-out 0.1s both; }
   .hero h1 .accent { background: linear-gradient(135deg, var(--teal-400), #8bb8e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .hero p { font-size: 17px; color: var(--slate-400); max-width: 560px; line-height: 1.7; margin-bottom: 0; animation: fadeInUp 0.7s ease-out 0.2s both; }
-  .hero-stats { display: flex; gap: 40px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); animation: fadeInUp 0.7s ease-out 0.3s both; }
-  .hero-stat .num { font-size: 24px; font-weight: 700; color: var(--teal-400); }
-  .hero-stat .label { font-size: 12px; color: var(--slate-500); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em; }
 
   /* Shop search banner */
   .shop-banner { background: var(--teal-900); padding: 40px 24px; text-align: center; }
@@ -95,6 +92,8 @@
   .section-header h2 { font-size: 20px; font-weight: 700; color: var(--pe-grey-dark); }
   .section-header .view-all { font-size: 13px; font-weight: 600; color: var(--pe-blue); text-decoration: none; transition: color 0.2s; }
   .section-header .view-all:hover { color: var(--pe-blue-dark); }
+
+  /* Function + Modality card grids (shared style) */
   .function-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 48px; }
   .function-card { background: var(--white); border: 1px solid var(--slate-200); border-radius: 10px; padding: 20px 18px; text-decoration: none; color: var(--pe-grey); transition: all 0.25s ease; position: relative; overflow: hidden; }
   .function-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--teal-500); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
@@ -104,10 +103,22 @@
   .function-card .card-icon img { width: 24px; height: 24px; object-fit: contain; }
   .function-card .card-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; line-height: 1.3; }
   .function-card .card-count { font-size: 12px; color: var(--slate-500); }
-  .modality-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 48px; }
-  .modality-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 100px; text-decoration: none; color: var(--pe-grey); font-size: 13.5px; font-weight: 500; transition: all 0.2s; }
-  .modality-pill:hover { background: var(--teal-50); border-color: var(--teal-300); color: var(--teal-800); }
-  .modality-pill img { width: 20px; height: 20px; object-fit: contain; }
+
+  /* Basics card grid */
+  .basics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 48px; }
+  .basics-card { background: var(--white); border: 1px solid var(--slate-200); border-radius: 10px; text-decoration: none; color: var(--pe-grey); transition: all 0.25s ease; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .basics-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--teal-500); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+  .basics-card:hover { border-color: var(--teal-300); box-shadow: 0 4px 16px rgba(16,185,129,0.08); transform: translateY(-2px); }
+  .basics-card:hover::before { transform: scaleX(1); }
+  .basics-card .basics-thumb { height: 120px; background: linear-gradient(135deg, var(--pe-blue-light), var(--pe-blue-dark)); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .basics-card .basics-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .basics-card .basics-thumb-placeholder { font-size: 10px; font-weight: 600; color: var(--teal-300); letter-spacing: 0.06em; text-transform: uppercase; }
+  .basics-card .basics-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+  .basics-card .basics-body .article-tag { margin-bottom: 8px; }
+  .basics-card .basics-body h4 { font-size: 14px; font-weight: 600; color: var(--pe-grey-dark); line-height: 1.4; margin-bottom: 8px; }
+  .basics-card .basics-body .excerpt { font-size: 12.5px; color: var(--slate-500); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+  /* Articles */
   .article-feed { margin-bottom: 48px; }
   .article-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 12px; overflow: hidden; margin-bottom: 16px; text-decoration: none; color: inherit; transition: box-shadow 0.25s; }
   .article-featured:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
@@ -131,6 +142,8 @@
   .article-item .thumb-label { font-size: 9px; font-weight: 600; color: var(--teal-300); letter-spacing: 0.06em; text-transform: uppercase; }
   .article-item h4 { font-size: 14px; font-weight: 600; color: var(--pe-grey-dark); line-height: 1.4; margin-bottom: 4px; }
   .article-item .excerpt { font-size: 12.5px; color: var(--slate-500); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+  /* Suppliers */
   .supplier-section { margin-bottom: 48px; }
   .supplier-logos { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
   .supplier-logo { width: 140px; height: 64px; background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.04em; transition: all 0.2s; }
@@ -142,6 +155,8 @@
   .filter-chip:hover .check { border-color: var(--white); background: rgba(255,255,255,0.2); }
   .shop-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--teal-600); color: var(--white); border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; transition: background 0.2s; }
   .shop-cta:hover { background: var(--teal-700); }
+
+  /* Sidebar */
   .sidebar { display: flex; flex-direction: column; gap: 28px; }
   .sidebar-card { background: var(--white); border: 1px solid var(--slate-200); border-radius: 12px; padding: 24px; }
   .sidebar-card h3 { font-size: 15px; font-weight: 700; color: var(--pe-grey-dark); margin-bottom: 16px; }
@@ -179,15 +194,18 @@
   @media (max-width: 768px) {
     .hero { padding: 48px 20px 40px; }
     .hero h1 { font-size: 28px; }
-    .hero-stats { gap: 24px; flex-wrap: wrap; }
     .article-featured { grid-template-columns: 1fr; }
     .article-featured .thumb { min-height: 140px; }
     .article-item { grid-template-columns: 80px 1fr; gap: 12px; }
     .article-item .thumb { width: 80px; height: 60px; }
     .function-grid { grid-template-columns: repeat(2, 1fr); }
+    .basics-grid { grid-template-columns: repeat(2, 1fr); }
     .site-header nav { display: none; }
     .shop-banner { padding: 32px 20px; }
     .shop-banner h2 { font-size: 18px; }
+  }
+  @media (max-width: 480px) {
+    .basics-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -225,11 +243,6 @@
     </div>
     <h1>Excipients for <span class="accent">Biologics, Biosimilars &amp; Advanced Therapies</span></h1>
     <p>Challenge-first resources for formulation scientists. Stabilize your mAb, optimize your LNP, or find injectable-grade materials - all in one place.</p>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="num">240+</div><div class="label">Excipient Monographs</div></div>
-      <div class="hero-stat"><div class="num">85</div><div class="label">Problem-Solution Guides</div></div>
-      <div class="hero-stat"><div class="num">36</div><div class="label">Verified Suppliers</div></div>
-    </div>
   </div>
 </section>
 
@@ -265,15 +278,16 @@
 
     <div class="section-header">
       <h2>Browse by Modality</h2>
+      <a href="#" class="view-all">View All Modalities &#8594;</a>
     </div>
-    <div class="modality-row">
-      <a href="#" class="modality-pill"><img src="images/icon-mabs.svg" alt="mAbs"> Monoclonal Antibodies (mAbs)</a>
-      <a href="#" class="modality-pill"><img src="images/icon-mrna.svg" alt="mRNA"> mRNA Therapeutics</a>
-      <a href="#" class="modality-pill"><img src="images/icon-vaccines.svg" alt="Vaccines"> Vaccines</a>
-      <a href="#" class="modality-pill"><img src="images/icon-biosimilars.svg" alt="Biosimilars"> Biosimilars</a>
-      <a href="#" class="modality-pill"><img src="images/icon-gene-therapy.svg" alt="Gene Therapy"> Gene Therapy (AAV)</a>
-      <a href="#" class="modality-pill"><img src="images/icon-cell-therapy.svg" alt="Cell Therapy"> Cell Therapy</a>
-      <a href="#" class="modality-pill"><img src="images/icon-adcs.svg" alt="ADCs"> ADCs</a>
+    <div class="function-grid">
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-mabs.svg" alt="mAbs"></div><div class="card-title">Monoclonal Antibodies (mAbs)</div><div class="card-count">52 excipients &middot; 18 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-mrna.svg" alt="mRNA"></div><div class="card-title">mRNA Therapeutics</div><div class="card-count">34 excipients &middot; 14 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-vaccines.svg" alt="Vaccines"></div><div class="card-title">Vaccines</div><div class="card-count">40 excipients &middot; 11 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-biosimilars.svg" alt="Biosimilars"></div><div class="card-title">Biosimilars</div><div class="card-count">46 excipients &middot; 9 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-gene-therapy.svg" alt="Gene Therapy"></div><div class="card-title">Gene Therapy (AAV)</div><div class="card-count">28 excipients &middot; 7 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-cell-therapy.svg" alt="Cell Therapy"></div><div class="card-title">Cell Therapy</div><div class="card-count">22 excipients &middot; 6 guides</div></a>
+      <a href="#" class="function-card"><div class="card-icon"><img src="images/icon-adcs.svg" alt="ADCs"></div><div class="card-title">ADCs</div><div class="card-count">30 excipients &middot; 8 guides</div></a>
     </div>
 
     <div class="section-header">
@@ -314,29 +328,31 @@
       <h2>BioPharma Basics</h2>
       <a href="#" class="view-all">All Basics Articles &#8594;</a>
     </div>
-    <div class="article-feed">
-      <div class="article-list">
-        <a href="#" class="article-item">
-          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
-          <div><div class="article-tag basics">Basics</div><h4>What Are Biopharmaceutical Excipients? A Complete Introduction</h4><div class="excerpt">The essential guide to excipient roles in biologics - from stabilizers and surfactants to buffers and cryoprotectants.</div></div>
-        </a>
-        <a href="#" class="article-item">
-          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
-          <div><div class="article-tag basics">Basics</div><h4>Monoclonal Antibody Formulation: Key Excipient Categories Explained</h4><div class="excerpt">Why mAbs need carefully selected excipients for stability, solubility, and shelf life - and which categories matter most.</div></div>
-        </a>
-        <a href="#" class="article-item">
-          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
-          <div><div class="article-tag basics">Basics</div><h4>Understanding Lipid Nanoparticles (LNPs): Structure, Components, and Excipient Roles</h4><div class="excerpt">How ionizable lipids, PEG-lipids, cholesterol, and helper lipids work together in mRNA delivery systems.</div></div>
-        </a>
-        <a href="#" class="article-item">
-          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
-          <div><div class="article-tag basics">Basics</div><h4>Lyophilization of Biologics: Why Excipient Selection Makes or Breaks the Process</h4><div class="excerpt">From glass transition temperature to cake structure - how excipients determine freeze-drying success.</div></div>
-        </a>
-        <a href="#" class="article-item">
-          <div class="thumb"><span class="thumb-label">Fundamentals</span></div>
-          <div><div class="article-tag basics">Basics</div><h4>Excipient Quality Standards for Injectable Biologics: USP, Ph. Eur., and Beyond</h4><div class="excerpt">Navigating compendial requirements, endotoxin limits, and GMP sourcing for parenteral formulations.</div></div>
-        </a>
-      </div>
+    <div class="basics-grid">
+      <a href="#" class="basics-card">
+        <div class="basics-thumb"><img src="images/basics-excipients-intro.jpg" alt="Excipients Introduction"><span class="basics-thumb-placeholder">Fundamentals</span></div>
+        <div class="basics-body"><div class="article-tag basics">Basics</div><h4>What Are Biopharmaceutical Excipients? A Complete Introduction</h4><div class="excerpt">The essential guide to excipient roles in biologics - from stabilizers and surfactants to buffers and cryoprotectants.</div></div>
+      </a>
+      <a href="#" class="basics-card">
+        <div class="basics-thumb"><img src="images/basics-mab-formulation.jpg" alt="mAb Formulation"><span class="basics-thumb-placeholder">Fundamentals</span></div>
+        <div class="basics-body"><div class="article-tag basics">Basics</div><h4>Monoclonal Antibody Formulation: Key Excipient Categories Explained</h4><div class="excerpt">Why mAbs need carefully selected excipients for stability, solubility, and shelf life.</div></div>
+      </a>
+      <a href="#" class="basics-card">
+        <div class="basics-thumb"><img src="images/basics-lnp-structure.jpg" alt="LNP Structure"><span class="basics-thumb-placeholder">Fundamentals</span></div>
+        <div class="basics-body"><div class="article-tag basics">Basics</div><h4>Understanding Lipid Nanoparticles (LNPs): Structure, Components, and Excipient Roles</h4><div class="excerpt">How ionizable lipids, PEG-lipids, cholesterol, and helper lipids work together in mRNA delivery.</div></div>
+      </a>
+      <a href="#" class="basics-card">
+        <div class="basics-thumb"><img src="images/basics-lyophilization.jpg" alt="Lyophilization"><span class="basics-thumb-placeholder">Fundamentals</span></div>
+        <div class="basics-body"><div class="article-tag basics">Basics</div><h4>Lyophilization of Biologics: Why Excipient Selection Makes or Breaks the Process</h4><div class="excerpt">From glass transition temperature to cake structure - how excipients determine freeze-drying success.</div></div>
+      </a>
+      <a href="#" class="basics-card">
+        <div class="basics-thumb"><img src="images/basics-quality-standards.jpg" alt="Quality Standards"><span class="basics-thumb-placeholder">Fundamentals</span></div>
+        <div class="basics-body"><div class="article-tag basics">Basics</div><h4>Excipient Quality Standards for Injectable Biologics: USP, Ph. Eur., and Beyond</h4><div class="excerpt">Navigating compendial requirements, endotoxin limits, and GMP sourcing for parenteral formulations.</div></div>
+      </a>
+      <a href="#" class="basics-card">
+        <div class="basics-thumb"><img src="images/basics-surfactants.jpg" alt="Surfactants"><span class="basics-thumb-placeholder">Fundamentals</span></div>
+        <div class="basics-body"><div class="article-tag basics">Basics</div><h4>The Role of Surfactants in Biologic Drug Products</h4><div class="excerpt">Why polysorbate 20 and 80 remain the industry standard - and what alternatives are emerging.</div></div>
+      </a>
     </div>
 
     <div class="section-header">
