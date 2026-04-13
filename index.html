@@ -47,10 +47,8 @@
   body { font-family: var(--font-body); color: var(--pe-grey); background: var(--white); -webkit-font-smoothing: antialiased; line-height: 1.6; }
   .site-header { background: var(--white); position: sticky; top: 0; z-index: 100; }
   .header-top { display: flex; align-items: center; padding: 12px 24px; max-width: var(--max-width); margin: 0 auto; gap: 24px; }
-  .header-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-  .header-logo .pe-icon { width: 44px; height: 44px; background: var(--pe-blue); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 800; font-size: 18px; letter-spacing: -0.5px; }
-  .header-logo .pe-text { font-size: 20px; font-weight: 700; color: var(--pe-grey-dark); letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.1; }
-  .header-logo .pe-text span { display: block; font-size: 14px; font-weight: 600; letter-spacing: 0.18em; color: var(--pe-grey); }
+  .header-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+  .header-logo img { height: 40px; width: auto; }
   .header-search { flex: 1; max-width: 500px; display: flex; margin: 0 auto; }
   .header-search input { flex: 1; padding: 10px 16px; border: 1px solid #ccc; border-right: none; border-radius: 0; font-size: 13px; color: var(--pe-grey-dark); outline: none; text-transform: uppercase; letter-spacing: 0.04em; }
   .header-search input::placeholder { color: #999; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -226,8 +224,7 @@
 <header class="site-header">
   <div class="header-top">
     <a href="#" class="header-logo">
-      <div class="pe-icon">PE</div>
-      <div class="pe-text">Pharma<span>Excipients</span></div>
+      <img src="images/pe-logo.png" alt="Pharma Excipients">
     </a>
     <div class="header-search">
       <input type="text" placeholder="Search (Articles)">
