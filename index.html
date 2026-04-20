@@ -72,10 +72,10 @@
   .hero { position: relative; background: linear-gradient(135deg, #1a3a5c 0%, var(--pe-blue) 50%, #4a80b0 100%); overflow: hidden; padding: 40px 24px 36px; }
   .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 20% 80%, rgba(16,185,129,0.15) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 80% 20%, rgba(48,90,140,0.25) 0%, transparent 70%); pointer-events: none; }
   .hero::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle 1px at center, rgba(16,185,129,0.15) 0%, transparent 100%); background-size: 48px 48px; opacity: 0.5; pointer-events: none; }
-  .hero-inner { max-width: var(--max-width); margin: 0 auto; position: relative; z-index: 1; text-align: center; display: flex; align-items: center; gap: 40px; }
-  .hero-text { flex: 1; text-align: center; }
-  .hero-newsletter { flex-shrink: 0; }
-  .hero-newsletter a { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; color: var(--white); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background 0.2s, border-color 0.2s; }
+  .hero-inner { max-width: var(--max-width); margin: 0 auto; position: relative; z-index: 1; text-align: center; }
+  .hero-subtitle-row { display: flex; align-items: center; justify-content: center; gap: 32px; max-width: 900px; margin: 0 auto; }
+  .hero-subtitle-row p { margin: 0; text-align: left; }
+  .hero-newsletter a { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; color: var(--white); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background 0.2s, border-color 0.2s; flex-shrink: 0; }
   .hero-newsletter a:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
   .hero-badge { display: inline-flex; margin-left: auto; margin-right: auto; align-items: center; gap: 8px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); border-radius: 100px; padding: 6px 16px 6px 8px; font-size: 12px; font-weight: 600; color: var(--teal-300); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 24px; animation: fadeInDown 0.6s ease-out; }
   .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal-400); animation: pulse-dot 2s ease-in-out infinite; }
@@ -253,12 +253,12 @@
 <!-- HERO BANNER -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-text">
-      <h1>Excipients for <span class="accent">Biologics, Biosimilars &amp; Advanced Therapies</span></h1>
+    <h1>Excipients for <span class="accent">Biologics, Biosimilars &amp; Advanced Therapies</span></h1>
+    <div class="hero-subtitle-row">
       <p>Challenge-first resources for formulation scientists. Stabilize your mAb,<br>optimize your LNP, or find injectable-grade materials - all in one place.</p>
-    </div>
-    <div class="hero-newsletter">
-      <a href="#">Biopharma Newsletter</a>
+      <div class="hero-newsletter">
+        <a href="#">Biopharma Newsletter</a>
+      </div>
     </div>
   </div>
 </section>
